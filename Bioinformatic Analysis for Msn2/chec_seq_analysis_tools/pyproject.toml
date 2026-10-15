@@ -1,0 +1,27 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+# Created on Wed Feb 18 08:06:58 2026
+
+# @author: alexturek
+
+[build-system]
+requires = ["hatchling >= 1.26"]
+build-backend = "hatchling.build"
+
+[project]
+name="chec_seq_analysis_tools"
+version="0.1.0"
+description="Module of functions that can aid with analysis of ChEC-seq data"
+requires-python=">=3.12"
+dependencies=["numpy", 
+"biopython", 
+"dna_conformation_predictors",
+"pandas",
+"pysam"]
+
+[tool.hatch.build.targets.wheel]
+packages=["src/chec_seq_analysis_tools"]
+
+[tool.hatch.build.targets.sdst]
+include=["src/chec_seq_analysis_tools"]
